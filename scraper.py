@@ -7,7 +7,7 @@ html = scraperwiki.scrape(url) # get the webpage
 
 root= lxml.html.fromstring(html) # transform the webpage so we can work with it
 
-table=root.cssselect("table")[1] # find the second table (0 is the first one)
+table=root.cssselect("table")[0] # find the second table (0 is the first one)
 
 rows=table.cssselect("tbody tr") # find every row in the table
 
